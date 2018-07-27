@@ -1,17 +1,18 @@
-var recipes = new Object ({})
- var obj = { prop: 1 }
-function updateObjectWithKeyAndValue(object, key, value) {
-  return Object.assign({},obj,{[key]:value})
+var recipes = new Object({ omelette: 'eggs' })
+
+function updateObjectWithKeyAndValue(recipes, key, value){
+  return Object.assign({}, recipes, { [key]: value });
+
 }
-function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
-  object[key] = value
-  return object
+
+function destructivelyUpdateObjectWithKeyAndValue(recipes, key, value){
+  recipes[key] = value;
+  return recipes;
 }
-function deleteFromObjectByKey(object, key) {
-  delete object.key;
-  return obj
+
+function deleteFromObjectByKey(recipes, key){
+  delete recipes.key;
+  return recipes;
 }
-function destructivelyDeleteFromObjectByKey(object, key) {
-  delete object.key
-  return object
-}
+
+
